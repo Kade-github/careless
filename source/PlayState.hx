@@ -1125,7 +1125,13 @@ class PlayState extends MusicBeatState
 
 	public var videoSprite:FlxSprite;
 
-	public function focusOut() {openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));}
+	public function focusOut() {
+		persistentUpdate = false;
+		persistentDraw = true;
+		paused = true;
+
+		openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+	}
 	public function focusIn() 
 	{ 
 		// nada 
