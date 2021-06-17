@@ -1,3 +1,6 @@
 export/
 .vscode/
 assets/preload/data/milf/modchart.lua
+export/release/windows/haxe/ApplicationMain.hx
+export/release/windows/obj/src/ApplicationMain.cpp
+export/release/windows/obj/src/lime/utils/AssetCache.cpp
