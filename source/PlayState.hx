@@ -1130,6 +1130,12 @@ class PlayState extends MusicBeatState
 		persistentDraw = true;
 		paused = true;
 
+			if (FlxG.sound.music != null)
+			{
+				FlxG.sound.music.pause();
+				vocals.pause();
+			}
+
 		openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 	}
 	public function focusIn() 
