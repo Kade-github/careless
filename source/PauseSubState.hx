@@ -34,7 +34,9 @@ class PauseSubState extends MusicBeatSubstate
 		super();
 
 		if (PlayState.useVideo)
+		{
 			menuItems.remove('Resume');
+		}
 
 		pauseMusic = new FlxSound().loadEmbedded(Paths.music('breakfast'), true, true);
 		pauseMusic.volume = 0;
@@ -101,6 +103,15 @@ class PauseSubState extends MusicBeatSubstate
 
 	override function update(elapsed:Float)
 	{
+		if (FlxG.sound.music != null)
+			{
+				if (!FlxG.sound.music.playing)
+				{
+					FlxG.sound.music.pause();
+					PlayState.instance.vocals.pause();
+				}
+			}
+
 		if (pauseMusic.volume < 0.5)
 			pauseMusic.volume += 0.01 * elapsed;
 

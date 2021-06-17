@@ -106,7 +106,7 @@ class PlayState extends MusicBeatState
 	var detailsPausedText:String = "";
 	#end
 
-	private var vocals:FlxSound;
+	public var vocals:FlxSound;
 
 	public static var dad:Character;
 	public static var gf:Character;
@@ -1126,6 +1126,8 @@ class PlayState extends MusicBeatState
 	public var videoSprite:FlxSprite;
 
 	public function focusOut() {
+		if (paused)
+			return;
 		persistentUpdate = false;
 		persistentDraw = true;
 		paused = true;
