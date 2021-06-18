@@ -1160,8 +1160,6 @@ class PlayState extends MusicBeatState
 		webmHandler.makePlayer();
 		webmHandler.webm.name = str1;
 
-		webmHandler.
-
 		GlobalVideo.setWebm(webmHandler);
 
 		GlobalVideo.get().source(source);
