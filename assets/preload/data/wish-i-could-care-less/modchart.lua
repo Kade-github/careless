@@ -11,7 +11,7 @@ function resize()
 end
 
 function start (song)
-    downscroll = false
+    useDownscroll(false)
 	w = getScreenWidth()
 	w1 = (w / 4) * 2 + (getWindowWidth() / 2) + 100
 	w2 = w / -2.5
